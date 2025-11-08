@@ -84,33 +84,29 @@
   </div>
 <div class="body_bg layout_padding">  
 <!-- contact section -->
-
-    <section class="contact_section">
-     
-      <div class="container contact_bg layout_padding2-top">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="contact_form ">
-              <form action="mailto:">
-                <input type="text" placeholder="Nombre ">
-                <input type="email" placeholder="@mail">
-                <input type="text" placeholder="Mensaje" class="message_input">
-                <button>
-                  Enviar
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <img src="images/contact-img.jpg" alt="">
-            </div> </div> </div>
-          </div>
+  <h1>Formulario de contacto</h1>
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
+          <input type="email" class="form-control" placeholder="Nombre" name="name">
+          <div id="emailHelp" class="form-text">Escribe tu nombre completo</div>
         </div>
-      </div>
-    </section>
-
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Correo Electrónico</label>
+          <input type="password" class="form-control" placeholder="Email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Mensaje</label>
+          <input type="password" class="form-control" placeholder="Mensaje" name="message">
+        </div>
+        
+        <button type="submit" id="button" class="btn btn-primary">Submit</button>
+      </form>
     </div>
+  </div>
+
    
 
    <!-- footer section -->
@@ -126,5 +122,4 @@
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
 </body>
-
 </html>
