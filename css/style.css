@@ -613,5 +613,13 @@ a:focus {
   color: #ffffff;
 }
 
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
