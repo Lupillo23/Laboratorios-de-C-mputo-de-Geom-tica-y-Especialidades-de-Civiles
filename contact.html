@@ -87,24 +87,26 @@
   </div>
   <div class="body_bg layout_padding">
     <!-- contact section -->
-    <h1>Formulario de contacto</h1>
+    <div style="text-align: center;">
+      <p style="font-size: 35px;">Formulario de contacto</p>
+    </div>
     <div class="container">
       <div class="row">
-        <form>
+        <form id="form">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
-            <input type="email" class="form-control" placeholder="Nombre" name="name">
-            <div id="emailHelp" class="form-text">Escribe tu nombre completo</div>
+            <label for="name" class="form-label">Nombre Completo</label>
+            <input type="name" class="form-control" placeholder="Escribe tu nombre completo" name="name" id="name">
           </div>
           <div class="mb-3">
-            <label for="inputEmail" class="form-label">Correo Electrónico</label>
-            <input type="password" class="form-control" placeholder="Email" name="email">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" placeholder="Escribe tu correo electrónico" name="email"
+              id="email">
           </div>
           <div class="mb-3">
             <label for="inputMessage" class="form-label">Mensaje</label>
-            <textarea id="inputMessage" class="form-control" placeholder="Mensaje" rows="5" name="message"></textarea>
+            <textarea id="message" class="form-control" placeholder="Escribe aqui tu mensaje" rows="5"
+              name="message"></textarea>
           </div>
-
           <input type="submit" class="btn btn-succes" id="button" value="ENVIAR MENSAJE">
         </form>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -128,35 +130,35 @@
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <!--Bootstrap cdn script-->>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-      crossorigin="anonymous"></script>
-    <!--SCRIPT para el servicio de mensajería-->
-    <script>const btn = document.getElementById('button');
 
-      document.getElementById('form')
-        .addEventListener('submit', function (event) {
-          event.preventDefault();
-
-          btn.value = 'Enviando...';
-
-          const serviceID = 'default_service';
-          const templateID = 'template_kbzhnzn';
-
-          emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-              btn.value = 'ENVIAR MENSAJE';
-              alert('Mensaje Enviado con Éxito');
-            }, (err) => {
-              btn.value = 'ENVIAR MENSAJE';
-              alert(JSON.stringify(err));
-            });
-        });
-    </script>
 </body>
+
+<!--Bootstrap cdn script-->>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+<!--SCRIPT para el servicio de mensajería-->
+<script>const btn = document.getElementById('button');
+
+  document.getElementById('form')
+    .addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      btn.value = 'Enviando...';
+
+      const serviceID = 'default_service';
+      const templateID = 'template_ksws9ii';
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'ENVIAR MENSAJE';
+          alert('Mensaje Enviado con Éxito');
+        }, (err) => {
+          btn.value = 'ENVIAR MENSAJE';
+          alert(JSON.stringify(err));
+        });
+    });
+</script>
 
 </html>
