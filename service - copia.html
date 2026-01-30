@@ -33,6 +33,17 @@
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
+<!-- responsive style sección para actualizar fecha en automático--> 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear() + ".";
+    }
+  });
+</script>
+
+
 <body class="sub_page"> 
   <div class="hero_area">
     <!-- header section strats -->
@@ -167,15 +178,14 @@
     <!-- end service section -->
 
   </div>
-  
-
-   <!-- footer section -->
+  <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      Todos los derechos reservados LCDICyG
-      <a href="https://html.design/">2023.</a>
-    </p>
+    Todos los derechos reservados LCDICyG <span id="year"></span>
+  </p>
   </section>
+
+   
   <!-- parte final -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
