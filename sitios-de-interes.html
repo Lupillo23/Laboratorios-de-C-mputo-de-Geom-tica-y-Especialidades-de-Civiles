@@ -32,6 +32,17 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
+
+<!-- responsive style sección para actualizar fecha en automático--> 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear() + ".";
+    }
+  });
+</script>
+
 <body>
 <body class="sub_page">
   <div class="hero_area">
@@ -121,15 +132,14 @@
 </body>
   <!-- end about section -->
 
- 
-
-   <!-- footer section -->
-  <br><br><section class="container-fluid footer_section">
+ <!-- footer section -->
+  <section class="container-fluid footer_section">
     <p>
-      Todos los derechos reservados LCDICyG
-      <a href="https://html.design/">2025.</a>
-    </p>
+    Todos los derechos reservados LCDICyG <span id="year"></span>
+  </p>
   </section>
+
+   
   <!-- parte final -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
