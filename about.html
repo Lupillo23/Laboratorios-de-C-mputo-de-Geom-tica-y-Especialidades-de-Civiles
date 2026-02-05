@@ -60,13 +60,25 @@
       text-align: justify;
     }
     .row.align-items-center img {
-  border: 3px solid #6F4E37; 
-  box-sizing: border-box;    
-}
+      border: 3px solid #6F4E37; 
+      box-sizing: border-box;    
+    }
   </style> 
 
   
 </head>
+
+<!-- responsive style sección para actualizar fecha en automático--> 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear() + ".";
+    }
+  });
+</script>
+
+
 
 <body class="sub_page">
   <div class="hero_area">
@@ -90,7 +102,7 @@
                 <li class="nav-item active"><a class="nav-link" href="about.html">ACERCA</a></li>
                 <li class="nav-item"><a class="nav-link" href="service.html">SERVICIOS</a></li>
                 <li class="nav-item"><a class="nav-link" href="organigrama.html">ORGANIGRAMA</a></li>
-                <li class="nav-item"><a class="nav-link" href="sitios-de-interes.html">CURSOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="cursos.html">CURSOS</a></li>
                 <li class="nav-item"><a class="nav-link" href="ubicacion.html">UBICACIÓN</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">CONTÁCTANOS</a></li>
               </ul>
@@ -104,67 +116,98 @@
 
   <!-- about section -->
   <!-- Contenido -->
-  <div class="row bg-light text-dark px-5 py-5 align-items-center">
-    <div class="col-lg-8">
-      <h2 class="text-center font-weight-bold">Objetivo</h2>
-      <p class="text-justify">
-        La División de Ingenierías Civil y Geomática tiene como objetivo formar profesionistas que posean una formación multidisciplinaria conformada con excelentes fundamentos en las áreas de Construcción, Estructuras, Hidráulica, Sanitaria y Ambiental, Sistemas y Planeación, Geomática, Geotecnia, Geodesia, Cartografía, Fotogrametría, así como conocimientos y habilidades adicionales que los complementen como computación, comunicación gráfica, informática, administración y evaluación de proyectos, planeación, diseño, organización, operación y conservación de obras civiles, para prestar servicios útiles a la sociedad con alto grado de ética y profesionalismo, logrando así una competitividad laboral.
-      </p>
-    </div>
+  <div class="container-fluid bg-light text-dark py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h2 class="text-center font-weight-bold">Objetivo</h2>
+          <p class="text-justify">
+            La División de Ingenierías Civil y Geomática tiene como objetivo formar profesionistas que posean una formación multidisciplinaria conformada con excelentes fundamentos en las áreas de Construcción, Estructuras, Hidráulica, Sanitaria y Ambiental, Sistemas y Planeación, Geomática, Geotecnia, Geodesia, Cartografía, Fotogrametría, así como conocimientos y habilidades adicionales que los complementen como computación, comunicación gráfica, informática, administración y evaluación de proyectos, planeación, diseño, organización, operación y conservación de obras civiles, para prestar servicios útiles a la sociedad con alto grado de ética y profesionalismo, logrando así una competitividad laboral.
+          </p>
+        </div>
 
-    <div class="col-lg-4">
-      <figure class="centrado">
-        <img src="images/trenecito.jpg" alt="Cabús en la Facultad de Ingeniería" class="borde-grueso img-resp">
-        <figcaption>
-          Cabús de la Facultad de Ingeniería: En 1873 partió el primer tren de la Estación Buenavista de la Ciudad de México a Veracruz.
-          Se ubica a un costado del Auditorio Javier Barros Sierra, Facultad de Ingeniería.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="row bg-white text-dark px-5 py-5 align-items-center">
-    <div class="col-lg-4">
-      <img src="images/lab_civ.jpg" alt="Laboratorio Civil" class="img-fluid d-block mx-auto">
-    </div>
-    <div class="col-lg-8">
-      <h2 class="text-center font-weight-bold">Acciones</h2>
-      <p class="text-justify">
-        El Laboratorio de Geomática y Especialidades de Civil apoya las acciones formativas e iniciativas de la comunidad estudiantil y académica, brinda las siguientes actividades y servicios durante el ciclo escolar e intersemestral:
-      </p>
-      <ol>
-        <li>Impartición de prácticas.</li>
-        <li>Apoyo en la elaboración de material didáctico.</li>
-        <li>Apoyo técnico para la realización de prácticas con software especializado.</li>
-        <li>Apoyo académico a través de asesorías.</li>
-        <li>Impartición de cursos de actualización de software especializado.</li>
-        <li>Apoyo técnico para el desarrollo y realización de proyectos de investigación.</li>
-        <li>Apoyo técnico para la manipulación de hardware-software a los Académicos.</li>
-        <li>Apoyo a dependencias de la Facultad de Ingeniería para cursos, seminarios y re-inscripciones.</li>
-      </ol>
+        <div class="col-lg-4">
+          <figure class="centrado">
+            <img src="images/trenecito.jpg" alt="Cabús en la Facultad de Ingeniería" class="borde-grueso img-resp">
+            <figcaption>
+              Cabús de la Facultad de Ingeniería: En 1873 partió el primer tren de la Estación Buenavista de la Ciudad de México a Veracruz.
+              Se ubica a un costado del Auditorio Javier Barros Sierra, Facultad de Ingeniería.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row bg-white text-dark px-5 py-5 align-items-center">
-    <div class="col-lg-8">
-      <h2 class="text-center font-weight-bold">Prácticas</h2>
-      <p class="text-justify">
-        Se imparten prácticas para alumnos de Ingeniería Geomática, para la carrera de Ingeniería Civil y para los alumnos de la División de Ciencias de la Tierra, que cursan las asignaturas de Topografía General, Topografía I, Topografía II, Topografía III, Prácticas Generales, Geodesia, Geomática, Sistema de Coordenadas en Geodesia, Geodesia por Satélite, Sistemas de Información Geográfica I y II, Cartografía, Geomorfología y Percepción Remota I y II.
-      </p>
-    </div>
-    <div class="col-lg-4">
-      <img src="images/lab_geo.jpg" alt="Laboratorio Geomática" class="img-fluid d-block mx-auto">
+  <div class="container-fluid bg-white text-dark py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <img src="images/lab_civ.jpg" alt="Laboratorio Civil" class="img-fluid d-block mx-auto">
+        </div>
+        <div class="col-lg-8">
+          <h2 class="text-center font-weight-bold">Acciones</h2>
+          <p class="text-justify">
+            El Laboratorio de Geomática y Especialidades de Civil apoya las acciones formativas e iniciativas de la comunidad estudiantil y académica, brinda las siguientes actividades y servicios durante el ciclo escolar e intersemestral:
+          </p>
+          <ol>
+            <li>Impartición de prácticas.</li>
+            <li>Apoyo en la elaboración de material didáctico.</li>
+            <li>Apoyo técnico para la realización de prácticas con software especializado.</li>
+            <li>Apoyo académico a través de asesorías.</li>
+            <li>Impartición de cursos de actualización de software especializado.</li>
+            <li>Apoyo técnico para el desarrollo y realización de proyectos de investigación.</li>
+            <li>Apoyo técnico para la manipulación de hardware-software a los Académicos.</li>
+            <li>Apoyo a dependencias de la Facultad de Ingeniería para cursos, seminarios y re-inscripciones.</li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row bg-white text-dark px-5 py-5 align-items-center">
-  <div class="col-lg-4">
-    <img src="images/tut10.jpg" alt="Proyecto Ingeniería" class="img-fluid d-block mx-auto">
+  <div class="container-fluid bg-white text-dark py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h2 class="text-center font-weight-bold">Prácticas</h2>
+          <p class="text-justify">
+            Se imparten prácticas para alumnos de Ingeniería Geomática, para la carrera de Ingeniería Civil y para los alumnos de la División de Ciencias de la Tierra, que cursan las asignaturas de Topografía General, Topografía I, Topografía II, Topografía III, Prácticas Generales, Geodesia, Geomática, Sistema de Coordenadas en Geodesia, Geodesia por Satélite, Sistemas de Información Geográfica I y II, Cartografía, Geomorfología y Percepción Remota I y II.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <img src="images/lab_geo.jpg" alt="Laboratorio Geomática" class="img-fluid d-block mx-auto">
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-lg-8">
-    <h2 class="text-center font-weight-bold">Proyectos</h2>
-    <p class="text-justify">
-      Se desarrollan investigaciones de proyectos por semestre para los alumnos de la carrera de Ingeniería Civil que cursan asignaturas tales como Análisis Estructural, Diseño Estructural, Hidráulica Urbana, Presupuestación de Obras, Evaluación de Proyectos, Estática Estructural, Hidrología y Estructuras Metálicas, apoyándose con programas especializados de Ingeniería.
-    </p>
+
+  <div class="container-fluid bg-white text-dark py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <img src="images/tut10.jpg" alt="Proyecto Ingeniería" class="img-fluid d-block mx-auto">
+        </div>
+        <div class="col-lg-8">
+          <h2 class="text-center font-weight-bold">Proyectos</h2>
+          <p class="text-justify">
+            Se desarrollan investigaciones de proyectos por semestre para los alumnos de la carrera de Ingeniería Civil que cursan asignaturas tales como Análisis Estructural, Diseño Estructural, Hidráulica Urbana, Presupuestación de Obras, Evaluación de Proyectos, Estática Estructural, Hidrología y Estructuras Metálicas, apoyándose con programas especializados de Ingeniería.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
+<!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+    Todos los derechos reservados LCDICyG <span id="year"></span>
+  </p>
+  </section>
+  <!-- parte final -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+ 
+</body>
+
+</html>
