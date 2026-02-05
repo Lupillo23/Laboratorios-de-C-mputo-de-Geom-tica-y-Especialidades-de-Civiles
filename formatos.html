@@ -1,5 +1,5 @@
 
-}<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -34,6 +34,17 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
+
+<!-- responsive style sección para actualizar fecha en automático--> 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear() + ".";
+    }
+  });
+</script>
+
 <body>
 <body class="sub_page">
   <div class="hero_area">
@@ -67,7 +78,7 @@
                   <a class="nav-link" href="organigrama.html"> ORGANIGRAMA </a>
                 </li>
 		<li class="nav-item">
-                  <a class="nav-link" href="sitios-de-interes.html">CURSOS</a>
+                  <a class="nav-link" href="cursos.html">CURSOS</a>
                 </li>
 		<li class="nav-item">
                   <a class="nav-link" href="ubicacion.html"> UBICACIÓN </a>
@@ -102,9 +113,9 @@
 		<a href="documentos/reglamento.pdf" target="_blank" download="Reglamento" class="btn btn-danger"><img src="images/descarga.png" class="img-fluid">Reglamento</a>
                 <a href="documentos/formato_solicitud.pdf" target="_blank" download="Solicitud_Clase_Adicional" class="btn btn-danger"><img src="images/descarga.png" class="img-fluid">Solicitud de Clase Adicional</a>
 		<p class="card-text"></p>
-                <a href="documentos/Horarios1.pdf" target="_blank" download="Horarios Geomática 2024-II" class="btn btn-danger"><img src="images/descarga.png" class="img-fluid">Horarios Geomática 2024-II</a>
+                <a href="documentos/Horarios1.pdf" target="_blank" download="Horarios Geomática 2024-II" class="btn btn-danger"><img src="images/descarga.png" class="img-fluid">Horarios Geomática 2026-II</a>
 		
-                <a href="documentos/Horarios2.pdf" target="_blank" download="Horarios Civiles 2024-II" class="btn btn-danger"><img src="images/descarga.png" class="img-fluid">Horarios Civiles 2024-II</a>
+                <a href="documentos/Horarios2.pdf" target="_blank" download="Horarios Civiles 2024-II" class="btn btn-danger"><img src="images/descarga.png" class="img-fluid">Horarios Civiles 2026-II</a>
 		</div>
                </div>
        		 <hr class="my-3">
@@ -116,9 +127,8 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      Todos los derechos reservados LCDICyG
-      <a href="https://html.design/">2025.</a>
-    </p>
+    Todos los derechos reservados LCDICyG <span id="year"></span>
+  </p>
   </section>
 
 
